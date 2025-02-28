@@ -446,7 +446,6 @@ import re
 loop = 0
 cps = []
 oks = []
-ugen = ['user-agent-1', 'user-agent-2ا
 
 def rcrack(uid, pwx, tl):
     global loop
