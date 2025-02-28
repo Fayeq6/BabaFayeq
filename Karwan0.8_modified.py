@@ -255,7 +255,7 @@ def bangla():
 		b2()
 	if riaz1 =='3':
 		riaz()
-۳
+
 def m1():
     user=[]
     os.system('clear')
