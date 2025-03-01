@@ -22,7 +22,7 @@ print("=" * 50 + "\033[0m\n")
 print("[●]Tooles manufacturer | FayeqNaseh")
 print("[●]Telegram group      | @AFGHAN HACK")
 print("[1;150m[●]Status              | Gold")
-print("[1;130m[●]Version             | 0.1")
+print("[1;130m[●]Version             | 0.2")
 print("\033[1;92m" + "=" * 50)
 
 countries = {
